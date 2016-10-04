@@ -823,7 +823,14 @@ void testGame()
 //END GAME.
 void endGame()
 {
-    cout << "Player " << winnerId << " wins!!" << endl;
+	if (gridIsFull)
+	{
+		cout << "Draw game!" << endl;
+	}
+	else
+	{
+		cout << "Player " << winnerId << " wins!!" << endl;
+	}
     bool replay;
     char cReplay;
     cout << "Wanna play again? [Y/N]" << endl;
